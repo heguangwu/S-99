@@ -1,4 +1,4 @@
-package org.scala.study
+package study.scala.list
 
 import scala.annotation.tailrec
 
@@ -21,11 +21,5 @@ object P01 {
   }
   def last_3[A](ls: List[A]): A = ls.foldRight(null.asInstanceOf[A]) {
     (a, b) => if (b == null) a else b
-  }
-
-  def main(args: Array[String]): Unit = {
-    println(last_1(List(1, 1, 2, 3, 5, 8)))
-    println(last_2(List(1, 1, 2, 3, 5, 8)))
-    println(last_3(List(1, 1, 2, 3, 5, 8)))
   }
 }

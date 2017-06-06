@@ -1,4 +1,4 @@
-package org.scala.study
+package study.scala.list
 
 import scala.annotation.tailrec
 
@@ -13,9 +13,4 @@ object P12 {
 
   def decode_1[A](ls:List[(Int, A)]) : List[A] = ls flatMap { v => loop(Nil, v._1, v._2)}
   def decode_2[A](ls:List[(Int, A)]) : List[A] = ls.foldRight(List[A]()) {(a,b) => loop(b,a._1, a._2)}
-
-  def main(args: Array[String]): Unit = {
-    println(decode_1(List((4, 'a), (1, 'b), (2, 'c), (2, 'a), (1, 'd), (4, 'e))))
-    println(decode_2(List((4, 'a), (1, 'b), (2, 'c), (2, 'a), (1, 'd), (4, 'e))))
-  }
 }

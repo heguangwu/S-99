@@ -1,4 +1,4 @@
-package org.scala.study
+package study.scala.list
 
 import scala.annotation.tailrec
 
@@ -25,11 +25,5 @@ object P02 {
       case (_, Nil)  => throw new NoSuchElementException
     }
     truncate(1,ls.reverse)
-  }
-
-  def main(args: Array[String]): Unit = {
-    println(penultimate_1(List(1, 1, 2, 3, 5, 8)))
-    println(penultimate_2(List(1, 1, 2, 3, 5, 8)))
-    println(penultimate_3(List(1, 1, 2, 3, 5, 8)))
   }
 }
